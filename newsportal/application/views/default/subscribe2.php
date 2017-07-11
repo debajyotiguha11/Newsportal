@@ -20,19 +20,19 @@ $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'youremailID';                 // SMTP username
-$mail->Password = 'email password';                           // SMTP password
+$mail->Username = 'Your Email ID';                 // SMTP username
+$mail->Password = 'Email Password';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
  
-$mail->setFrom('Codersheadquarter@gmail.com', 'CODERS HeadQuarter');
+$mail->setFrom('YourEmailID', 'Name');
 $mail->addAddress($email);     
-$mail->addReplyTo('Codersheadquarter@gmail.com', 'Reply');
-$mail->addCC('Codersheadquarter@gmail.com');
+$mail->addReplyTo('noreply@something.com', 'NoReply');
+$mail->addCC('');
  
 $mail->isHTML(true);                                 
  
-$mail->Subject = 'BeTheChangeForANewIndia';
+$mail->Subject = 'Your Mail Subject Goes Here';
 $mail->Body    = $messagetosent;
 $mail->AltBody = 'you need HTML mail to view this content';
  
@@ -58,11 +58,11 @@ echo "<center><h1>You are Awesome!!</br> Subscribed successfully ! Thank you.</h
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	</head>
 <body>
-<script>
+<script> // add javascript to redirect after subscribing.
 setTimeout(function () {
    window.location.href= 'http://coders.uphero.com/bcni'; // the redirect goes here
  
-},5000);
+},5000); //  showing result for 5 second.
 </script>
 </body>
 </html>
